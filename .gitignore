@@ -1,0 +1,11 @@
+# Derleme çıktıları
+bin/
+obj/
+Debug/
+Release/
+
+# IDE/Editor dosyaları
+.vs/
+.vscode/
+*.user
+*.suo
