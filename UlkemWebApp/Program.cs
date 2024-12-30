@@ -15,15 +15,22 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseRouting();
-
 app.UseAuthorization();
 
-app.MapStaticAssets();
+// Static files support
+app.UseStaticFiles();
+
+app.MapControllerRoute(
+    name: "admin-root",
+    pattern: "Admin",
+    defaults: new { controller = "Dashboard", action = "Index" });
+
+app.MapControllerRoute(
+    name: "admin",
+    pattern: "Admin/{controller=Dashboard}/{action=Index}/{id?}");
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}")
-    .WithStaticAssets();
-
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
