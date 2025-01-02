@@ -6,7 +6,8 @@ public class AppDbContext:DbContext
      public DbSet<BlogYazisi>? BlogYazisi { get; set; }  
     public DbSet<Cicek>?  Cicek { get; set; }
      public DbSet<CicekTuru>?  CicekTuru { get; set; }
-
+     
+     public DbSet<Admin>? AdminGiris {get; set;}
      public DbSet<GonderimAmaci>?  GonderimAmaci { get; set; }
      public DbSet<Hakkimizda>?  Hakkimizda { get; set; }
      public DbSet<IletisimFormu>?  IletisimFormu { get; set; }
