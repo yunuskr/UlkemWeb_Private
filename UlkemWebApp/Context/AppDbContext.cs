@@ -25,7 +25,7 @@ public class AppDbContext:DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         optionsBuilder.UseSqlServer(
-    "Server=94.73.170.63;Database=u6793934_dbA4F;User ID=u6793934_userA4F;Password=Harun151223Harun;TrustServerCertificate=True;"
+    "Server=94.73.170.63;Database=u6793934_dbA4F;User ID=u6793934_userA4F;Password=Harun151224Harun;TrustServerCertificate=True;"
 );
     }
 
