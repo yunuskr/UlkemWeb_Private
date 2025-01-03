@@ -7,7 +7,7 @@ public class AppDbContext:DbContext
     public DbSet<Cicek>?  Cicek { get; set; }
      public DbSet<CicekTuru>?  CicekTuru { get; set; }
      
-     public DbSet<Admin>? AdminGiris {get; set;}
+     public DbSet<AdminLogin>? AdminGiris {get; set;}
      public DbSet<GonderimAmaci>?  GonderimAmaci { get; set; }
      public DbSet<Hakkimizda>?  Hakkimizda { get; set; }
      public DbSet<IletisimFormu>?  IletisimFormu { get; set; }
@@ -24,7 +24,9 @@ public class AppDbContext:DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer("Server=DESKTOP-B6HJKHB\\SQLEXPRESS;Database=UlkemWebDB;Trusted_Connection=True;TrustServerCertificate=True;");
+        optionsBuilder.UseSqlServer(
+    "Server=94.73.170.63;Database=u6793934_dbA4F;User ID=u6793934_userA4F;Password=Harun151223Harun;TrustServerCertificate=True;"
+);
     }
 
 }
